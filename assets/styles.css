@@ -33,6 +33,33 @@ body {
 .skip-link:focus { left: 1rem; top: 1rem; z-index: 1000; }
 
 
+/* Make event cards behave well with images */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;         /* hides any image overflow */
+}
+
+/* Image fills the card width with a fixed height, cropped nicely */
+.event-card .card-image {
+  width: 100%;
+  height: 220px;            /* adjust to taste */
+  object-fit: cover;        /* crop instead of squish */
+  display: block;
+}
+
+/* Body padding inside the card */
+.event-card .card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+/* Optional: make all cards the same height if your grid supports it */
+.section-events .grid.grid-3 > .event-card {
+  height: 100%;
+}
+
+
+
 .lab-logo {
   height: 80px;           /* Adjust to fit nicely in your header */
   width: auto;            /* Keeps proportions */
