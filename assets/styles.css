@@ -54,6 +54,11 @@ body {
   padding: 1rem 1.25rem 1.25rem;
 }
 
+.event-card.event-card--announcement {
+  background: var(--theme);
+  justify-content: center;
+}
+
 /* Optional: make all cards the same height if your grid supports it */
 .section-events .grid.grid-3 > .event-card {
   height: 100%;
