@@ -17,6 +17,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: 1.125rem;
   color: var(--ink);
   background-color: #f8fafc; /* subtle gray backdrop */
   line-height: 1.6;
@@ -102,15 +103,20 @@ a:hover {
   border-bottom: 1px solid rgba(15,23,42,.1);
 }
 .nav {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1rem;
 }
-.brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--ink); }
+.brand { display: flex; flex-shrink: 0; align-items: center; gap: .75rem; text-decoration: none; color: var(--ink); }
 .brand .logo {
   width: 40px; height: 40px; display: inline-block; background: #0b3d3a10; border-radius: 10px;
 }
-.brand .name { font-weight: 800; letter-spacing: .2px; font-size: 1.25rem; }
+.brand .name { font-weight: 800; letter-spacing: .2px; font-size: 1.5rem; }
+.primary-nav {
+  display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem;
+  font-size: 1.25rem; font-weight: 600;
+}
 .primary-nav a {
-  text-decoration: none; color: var(--ink); padding: .5rem .25rem; margin: 0 .25rem;
+  display: inline-flex; align-items: center;
+  text-decoration: none; color: var(--ink); padding: .65rem .8rem; line-height: 1.4;
   border-bottom: 2px solid transparent;
 }
 .primary-nav a:hover { border-bottom-color: var(--accent); }
@@ -130,7 +136,7 @@ a:hover {
   display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
   border-bottom: 2px solid #dbe4ea; padding-bottom: .5rem; margin-bottom: 1.5rem;
 }
-.section h2 { margin: 0; font-size: 1.6rem; }
+.section h2 { margin: 0; font-size: clamp(1.75rem, 2.5vw, 2rem); }
 
 /* Cards & grids */
 .grid { display: grid; gap: 1rem; }
@@ -139,6 +145,7 @@ a:hover {
 .card {
   background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 1rem 1.1rem;
+  font-size: 1rem; /* Keep card typography at its existing size. */
 }
 .card h3 { margin-top: 0; margin-bottom: .25rem; }
 .meta { color: var(--ink-muted); font-size: .95rem; }
@@ -184,10 +191,9 @@ a:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .nav { flex-direction: column; align-items: flex-start; padding: 1rem; }
-  .primary-nav { display: flex; flex-wrap: wrap; gap: .25rem; font-size: .95rem; }
-  .primary-nav a { margin: 0; }
+  .primary-nav { justify-content: flex-start; gap: .25rem; font-size: 1.125rem; }
   .section-header { flex-wrap: wrap; }
   .section-people .overlay-box { margin-inline: 1rem; padding: 1.5rem; }
 }
@@ -227,8 +233,9 @@ a:hover {
   text-align: left;
 }
 
+.overlay-box h1,
 .overlay-box h2 {
-  font-size: clamp(2rem, 2.4vw + 0.5rem, 2.8rem); /* scales but stays large */
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
   font-weight: 800;
   color: var(--ink);
   line-height: 1.2;
@@ -237,7 +244,7 @@ a:hover {
 
 .overlay-box p {
   color: var(--ink-muted);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.7;
 }
 
