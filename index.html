@@ -18,6 +18,7 @@
       <nav class="primary-nav">
         <a href="index.html" class="current" aria-current="page">Home</a>
         <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
         <a href="projects.html">Projects</a>
         <a href="software.html">Software</a>
       </nav>
@@ -47,35 +48,38 @@
     
 
 
-    <section class="section">
+    <section class="section" aria-labelledby="news">
       <div class="container">
         <div class="section-header">
-          <h2>News & Announcements</h2>
-          <a class="btn" href="people.html">We’re recruiting</a>
+          <h2 id="news">News &amp; Announcements</h2>
+          <a class="btn" href="publications.html">Latest publications</a>
         </div>
 
+        <div class="grid grid-2">
           <article class="card">
-            <h3>Our group is attending NeurIPS! </a></h3>
-            <p class="meta">Dec 2025</p>
+            <h3>New journal publications in 2026</h3>
+            <p class="meta">2026</p>
+            <p>Our work on tensor and sparse topic models and canonical correlation analysis is appearing in JMLR and the Electronic Journal of Statistics.</p>
+            <p><a href="publications.html#publications-2026">Read our latest publications</a></p>
           </article>
 
-        <article class="card">
-          <h3>Our preprints on Conditional(ish) Conformal Prediction and Data Augmentation are now on arxiv!</h3>
-          <p class="meta">Sep 2025</p>
-          <p>Well done to Yating, Yeo Jin, Sowon and Zixuan!</p>
-        </article>
-
           <article class="card">
-            <h3>Yeo Jin is giving a talk at the <a href="https://rss.org.uk/training-events/conference-2025/">Royal Statistics Society International Conference!</a></h3>
-            <p class="meta">Sep 2025</p>
-            <p>She will be presenting her work with Yating, Sowon and Zixuan on conformal prediction. </p>
+            <h3>New preprints from the group</h3>
+            <p class="meta">2026</p>
+            <p>Explore our latest work on data selection for fine-tuning, GNNs for brain connectomes, graph-based learning, network dynamics, and microbial communities.</p>
+            <p><a href="publications.html#preprints">Browse preprints and papers under review</a></p>
           </article>
 
+          <article class="card">
+            <h3>SpeedCP at ICML 2026</h3>
+            <p class="meta">2026</p>
+            <p>Our students presented the group's work on fast, kernel-based conditional conformal prediction at ICML.</p>
+            <p><a href="#icml-2026">See the poster-session photo</a></p>
+          </article>
 
           <article class="card">
-            <h3>SIGNAL Lab growing</h3>
-            <p class="meta">Ongoing</p>
-            <p>We welcome applications UChicago students (PhD/MS/Undergrad).</p>
+            <h3>Prospective applicants</h3>
+            <p>The lab is not currently accepting applications for student, research assistant, or postdoctoral positions.</p>
           </article>
         </div>
       </div>
@@ -122,23 +126,45 @@
         </div>
 
         <div class="grid grid-2">
+          <article class="card event-card" id="icml-2026">
+            <a href="images/events/icml-2026.jpg" aria-label="View the full ICML 2026 poster-session photo">
+              <img src="images/events/icml-2026-800.jpg"
+                   srcset="images/events/icml-2026-800.jpg 800w, images/events/icml-2026.jpg 1600w"
+                   sizes="(max-width: 700px) calc(100vw - 2rem), (max-width: 1200px) calc(50vw - 1.5rem), 576px"
+                   width="1600" height="1200"
+                   alt="SIGNAL Lab students discussing the SpeedCP poster with attendees at ICML 2026"
+                   class="card-image" loading="lazy" decoding="async" />
+            </a>
+            <div class="card-body">
+              <h3>Our students at ICML 2026</h3>
+              <p class="meta">2026</p>
+              <p>Sharing SpeedCP, our work on fast, kernel-based conditional conformal prediction, at the poster session.</p>
+              <p><a href="publications.html#speedcp">Read the paper</a></p>
+            </div>
+          </article>
+
           <article class="card event-card">
             <img src="images/events/neurips_25.jpeg" 
                  alt="SIGNAL Lab members at NeurIPS" 
                  class="card-image" />
             <div class="card-body">
-              <h3>Our group attended NeurIPS 2025</h3>
+              <h3>SIGNAL Lab at NeurIPS 2025</h3>
               <p class="meta">Dec. 2025, San Diego, USA.</p>
-              <p>We enjoyed connecting to the ML community.</p>
+              <p>Sowon, Yating, Yeo Jin, and Claire attended NeurIPS 2025 in San Diego.</p>
             </div>
           </article>
 
-            <article class="card event-card">
-            <img src="images/placeholder1.jpg" 
-                 alt="" 
-                 class="card-image" />
+          <article class="card event-card" id="rss-2025">
+            <a href="images/events/rss-2025.jpg" aria-label="View the full photo of Yeo Jin presenting at RSS 2025">
+              <img src="images/events/rss-2025-800.jpg"
+                   srcset="images/events/rss-2025-800.jpg 800w, images/events/rss-2025.jpg 1600w"
+                   sizes="(max-width: 700px) calc(100vw - 2rem), (max-width: 1200px) calc(50vw - 1.5rem), 576px"
+                   width="1600" height="1015"
+                   alt="Yeo Jin presenting the group's research on conformal prediction at RSS 2025"
+                   class="card-image" loading="lazy" decoding="async" />
+            </a>
             <div class="card-body">
-              <h3>Yeo Jin attended the RSS meeting.</h3>
+              <h3>Yeo Jin presented at the RSS meeting</h3>
               <p class="meta">Sept 2025, Edinburgh, UK.</p>
               <p>She showcased the group's work on conformal prediction.</p>
             </div>
@@ -164,7 +190,7 @@
             <div class="card-body">
               <h3>The group hosted a workshop at the NITMB!</h3>
               <p class="meta">April 2025, Chicago, USA</p>
-              <p>The workshop was a success, and we learned a ton of interesting developments in GNN theory@</p>
+              <p>The workshop highlighted recent advances and new perspectives in GNN theory.</p>
             </div>
           </article>
 
@@ -201,10 +227,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; 2025 SIGNAL Lab · University of Chicago
+      &copy; 2026 SIGNAL Lab · University of Chicago
     </div>
   </footer>
 </body>
 </html>
-
-

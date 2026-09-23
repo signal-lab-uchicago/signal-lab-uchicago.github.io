@@ -40,11 +40,12 @@ body {
   overflow: hidden;         /* hides any image overflow */
 }
 
-/* Image fills the card width with a fixed height, cropped nicely */
+/* Give every event image the same responsive frame without stretching. */
 .event-card .card-image {
   width: 100%;
-  height: 220px;            /* adjust to taste */
-  object-fit: cover;        /* crop instead of squish */
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   display: block;
 }
 
@@ -116,7 +117,7 @@ a:hover {
 
 /* Cards & grids */
 .grid { display: grid; gap: 1rem; }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .card {
   background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); box-shadow: var(--shadow);
@@ -131,6 +132,16 @@ a:hover {
   background: var(--accent); color: white; box-shadow: var(--shadow);
 }
 .btn:hover { filter: brightness(0.95); }
+.btn:hover, .btn:focus-visible { color: white; }
+
+/* Publication lists use the same cards and colors as the project pages. */
+.publication-list { display: grid; gap: 1rem; }
+.publication-list .meta { margin: .35rem 0; }
+.publication-list .authors { margin: .5rem 0; }
+.publication-links { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin: .65rem 0 0; }
+.publication-nav { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+.recruitment-status { border-left: 3px solid var(--accent); padding-left: 1rem; }
+:target { scroll-margin-top: 1rem; }
 
 /* Footer */
 .site-footer {
@@ -142,6 +153,10 @@ a:hover {
   display: grid; grid-template-columns: 76px 1fr; gap: .9rem; align-items: center;
 }
 .person img { width: 76px; height: 76px; object-fit: cover; border-radius: 50%; border: 3px solid #ffffff; box-shadow: var(--shadow); }
+.person-initials {
+  width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--theme); color: var(--accent); font-size: 1.25rem; font-weight: 700;
+}
 .person .role { color: var(--ink-muted); margin: 0; }
 
 /* Project tags */
@@ -153,7 +168,11 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-  .primary-nav { font-size: .95rem; }
+  .nav { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .primary-nav { display: flex; flex-wrap: wrap; gap: .25rem; font-size: .95rem; }
+  .primary-nav a { margin: 0; }
+  .section-header { flex-wrap: wrap; }
+  .section-people .overlay-box { margin-inline: 1rem; padding: 1.5rem; }
 }
 
 
