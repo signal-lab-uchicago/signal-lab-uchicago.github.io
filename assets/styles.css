@@ -49,14 +49,26 @@ body {
   display: block;
 }
 
+.event-card .welcome-portraits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  overflow: hidden;
+}
+
+.welcome-portraits img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
 /* Body padding inside the card */
 .event-card .card-body {
   padding: 1rem 1.25rem 1.25rem;
-}
-
-.event-card.event-card--announcement {
-  background: var(--theme);
-  justify-content: center;
 }
 
 /* Optional: make all cards the same height if your grid supports it */
