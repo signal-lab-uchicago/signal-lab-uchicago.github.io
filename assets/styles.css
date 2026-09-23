@@ -80,10 +80,9 @@ body {
 
 
 .lab-logo {
-  height: 80px;           /* Adjust to fit nicely in your header */
-  width: auto;            /* Keeps proportions */
-  margin-right: 0.75rem;  /* Adds space before the lab name */
-  vertical-align: middle; /* Aligns with text */
+  height: 104px;
+  width: auto;
+  display: block;
 }
 
 /* Header / Nav */
@@ -103,13 +102,13 @@ a:hover {
   border-bottom: 1px solid rgba(15,23,42,.1);
 }
 .nav {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1rem;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem 1rem;
 }
 .brand { display: flex; flex-shrink: 0; align-items: center; gap: .75rem; text-decoration: none; color: var(--ink); }
 .brand .logo {
   width: 40px; height: 40px; display: inline-block; background: #0b3d3a10; border-radius: 10px;
 }
-.brand .name { font-weight: 800; letter-spacing: .2px; font-size: 1.5rem; }
+.brand .name { font-weight: 800; letter-spacing: .2px; font-size: 2.125rem; line-height: 1.1; }
 .primary-nav {
   display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem;
   font-size: 1.25rem; font-weight: 600;
@@ -192,7 +191,9 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
-  .nav { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .nav { flex-direction: column; align-items: flex-start; padding: .75rem 1rem; }
+  .lab-logo { height: 88px; }
+  .brand .name { font-size: 1.75rem; }
   .primary-nav { justify-content: flex-start; gap: .25rem; font-size: 1.125rem; }
   .section-header { flex-wrap: wrap; }
   .section-people .overlay-box { margin-inline: 1rem; padding: 1.5rem; }
