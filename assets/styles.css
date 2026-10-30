@@ -50,6 +50,9 @@ body {
   display: block;
 }
 
+.event-card .defense-photo { object-position: 50% 45%; }
+.event-card .paper-logo { object-fit: contain; background: #f7fbfa; }
+
 .event-card .welcome-portraits {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
